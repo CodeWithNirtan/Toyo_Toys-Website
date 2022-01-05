@@ -1,0 +1,1039 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Toyo Toys</title>
+      <link rel="shortcut icon" type="image/png" href="Images/teddy_bear.png">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/c1115e2cf1.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="./cssfiles/mainpage.css.css">
+      <script src="./Javascript/mainpage.js"></script>
+      
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+
+      
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg bg-primary">
+         <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav ml-5 ">
+               <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_self" href="./index.html" ><i class="fas fa-home"></i> Home</a></li>
+               <li class="nav-item mr-3"><a class="nav-link navbar_text3"  href="#shop_modal" data-toggle="modal"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+   <!-- shop-modal-start -->
+               <div id="shop_modal" class="modal fade"  role="dialog" style="background: transparent;">
+                  <div class="modal-dialog modal-lg" role="document" >
+                     <div class="modal-content bg-dark" >
+                        <div class="modal-header">
+                           <h4 class="modal-title login_form">Locate us on Google map</h4>
+                           <input type="button" data-dismiss="modal" class="btn btn-danger float-right mt-3"  value="&times">
+                        </div>
+                        <div class="modal-body">
+                           <div id="formap"style="width: 100%; height: 500px;"></div>                       
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDevD16r-TlxIkyo_r20JTGryD1GEVlIqg&callback=myMap"></script>
+<!-- shop-modal-end -->
+               <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="./htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us</a></li>
+               <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="./htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+               <form class="form-inline">
+                  <input type="search" class="form-control" style="height: 30px;" placeholder="Search...">&nbsp;
+                  <button type="submit" class="btn btn-outline-dark btn-sm"><i class="fas fa-search"></i></button>
+              </form>&nbsp;&nbsp;&nbsp;
+               <li class="nav-item mr-3"><a class="nav-link navbar_text3" href="#loginmodal" data-toggle="modal" ><i class="fas fa-user"></i> Login</a></li>
+               <!-- login-modal-start -->
+               <div class="modal fade" role="dialog-box" id="loginmodal">
+                  <div class="modal-dialog  shadow" style="border-radius: 5px;">
+                     <div class="modal-content">
+                        <div class="modal-header bg-dark"><h4 class="login_form">Login</h4>
+                        <a href="#" role="button" class="btn btn-danger login_form" data-dismiss="modal">&times;</a>
+                        </div>
+                        <div class="modal-body">
+                           <form action=".php" method="get" name="myform">
+                              <div class="input-group">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text login_form">User Email</span>
+                                 </div>
+                                 <input class="form-control" type="email" id="email" placeholder="Enter your Email"  required='required'>
+                                 <script>
+                                    $(document).ready(function(){
+                                       $('#email,#password').focus(function(){
+                                          $(this).css('background','lightblue')
+                                       });
+                                       $('#email,#password').blur(function(){
+                                          $(this).css('background','')
+                                       });
+                                    });
+                                 </script>
+                              </div>
+                              <div class="input-group mt-2">
+                                 <div class="input-group-prepend">
+                                    <span class="input-group-text login_form">Password</span>
+                                 </div>
+                                 <input class="form-control" type="password" id="password" required='required' placeholder="Enter your password" >
+                              </div>
+                           </form>
+                        </div>
+                        <div class="modal-footer bg-dark">
+                           <button type="submit" class="btn btn-success login_form ">Login</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- login-modal-end -->
+            </ul>
+         </div>
+      </nav>
+      <!-- second-header -->
+      <nav class="navbar navbar-expand-lg sticky-top bg-light">
+         <a href="./index.html" class="navbar-brand logo ml-lg-4 mt-3 "><img src="./images/mainlogo.png" width="250px" height="80px" > </a>
+         <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsibleNavId" ><i class="fas fa-bars"></i></button>
+         <div class="collapse navbar-collapse justify-content-center mt-sm-4" id="collapsibleNavId">
+            <ul class="navbar-nav text-lg-center">
+               <li class="nav-item active  dropdown ">
+                  <a class="nav-link dropdown navbar_text navbar_img" href="#" ><img src="./Images/shopbybrandlogos/brand.png" alt="imge" width="50px" height="50px" class=" text-center"><span class="d-lg-block">Shop by Brand</span></a>
+                  <div class="dropdown-menu dropdown_menu bg-primary">
+                     <a class="dropdown-item navbar_text2" href="./htmlpages/Mattel.html" target="_blank"><span><img src="./images/toys brand logos/mattel.png" alt="logo" width="40p%" height="40%"></span> Mattle</a>
+                     <a class="dropdown-item navbar_text2" href="./htmlpages/Nerf.html" target="_blank"><span><img src="./images/toys brand logos/nerf.png" alt="logo" width="40p%" height="40%"></span> Nerf</a>
+                     <a class="dropdown-item navbar_text2" href="./htmlpages/Playsckool.html" target="_blank"><span><img src="./images/toys brand logos/playskool.png" alt="logo" width="40p%" height="40%"></span> playskool</a>
+                     <a class="dropdown-item navbar_text2" href="./htmlpages/Hotwheels.html" target="_blank"><span><img src="./images/toys brand logos/hot-wheels.png" alt="logo" width="40p%" height="40%"></span> Hot wheel</a>
+                  </div>
+               </li>
+               <li class="nav-item dropdown ">
+                  <a href="#" class="nav-link dropdown navbar_text navbar_img"><img src="./agelogos/happiness.png" alt="imge" width="50px" height="50px" class=""><span class="d-lg-block">Shop by Age</span></a>
+                  <div class="dropdown-menu dropdown_menu bg-primary"> 
+                     <a class="dropdown-item navbar_text2" target="_blank" href="./htmlpages/5to6months.html"><img src="./logoicons/baby1.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 5-6 months</a>
+                     <a class="dropdown-item navbar_text2" target="_blank" href="./htmlpages/1to5year.html"><img src="./logoicons/3-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 1-5 years</a>
+                     <a class="dropdown-item navbar_text2" target="_blank" href="./htmlpages/6to10year.html"><img src="./logoicons/5-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 6-10 years</a>
+                  </div>
+               </li>
+               <li class="nav-item ">
+                  <a class="nav-link navbar_text navbar_img" target="_blank" href="./htmlpages/educationaltoys.html"><img src="./educationallogo/alphabet.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Educational Toys</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link navbar_text navbar_img" target="_blank" href="./htmlpages/bestseller.html"><img src="./topsellerlogo/best.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Best Sellers</span></a>
+               </li>
+               <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="#" ><i class="fas fa-home"></i> Home</a></li>
+               <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="./htmlpages/"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+               <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="./htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us  </a></li>
+               <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="./htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+            </ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         
+         <nav class="navbar">
+            <ul class="navbar-nav">
+               <a href="#" class=" btn_1"><i class="fas fa-heart text-danger fa-lg"> <input type="reset" value="0" class="btn btn-primary" max="1" min="0" ></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+               <a href="#" class=" btn_1"><i class="fas fa-shopping-basket text-primary fa-lg"> <input type="reset" value="0" class="btn btn-primary shop" max="1" min="0" ></i></a>
+            </ul>
+         </nav>
+      </div>
+      </nav>
+      <!-- carousel -->
+      <div class="jumbotron-fluid">
+         <div class="carousel slide" data-ride="carousel" id="thecarousel">
+            <ol class="carousel-indicators">
+               <li data-slide-to="0" data-target="#thecarousel"></li>
+               <li data-slide-to="1" data-target="#thecarousel"></li>
+               <li data-slide-to="2" data-target="#thecarousel"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <img src="./slider images/slider1.png" alt="slider1" width="100%" height="500px">
+               </div>
+               <div class="carousel-item ">
+                  <img src="./slider images/slider3.jpg" alt="slider1" width="100%" height="500px">
+               </div>
+               <div class="carousel-item ">
+                  <img src="./slider images/slider2.jpg" alt="slider1" width="100%" height="500px">
+               </div>
+               <a href="#thecarousel" class="carousel-control-prev" role="button" data-slide="prev">
+               <i class="fas fa-arrow-left text-dark fa-lg"></i>
+               </a>
+               <a href="#thecarousel" class="carousel-control-next" role="button" data-slide="next">
+               <i class="fas fa-arrow-right text-dark fa-lg"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- carousel-end -->
+      <!-- shop-by-age -->
+      <div class="container" style="margin-top: 100px;">
+         <h1 class="latest_toys text-white" style="font-family: 'Lobster', cursive;">Shop by Age</h1>
+         <div class="row justify-content-center" style="margin-top: 100px;">
+            <div class="card m-2">
+               <img src="./logoicons/baby1.jpg" width="300px" height="300px" alt="img2">
+               <div class="card-body">
+                  <h5 class="card-title">Toys for (5-6)months above</h5>
+                  <p class="card-text">click below to view more</p>
+               </div>
+               <div class="card-footer">
+                  <a href="./htmlpages/5to6months.html" target="_blank" class="btn text-primary font-weight-bold" role="button">See more</a>
+               </div>
+            </div>
+            <div class="card m-2">
+               <img src="./logoicons/3-old.jpg" width="300px" height="300px" alt="img3">
+               <div class="card-body">
+                  <h5 class="card-title">Toys for (1-5)years above</h5>
+                  <p class="card-text">click below to view more</p>
+               </div>
+               <div class="card-footer">
+                  <a href="./htmlpages/1to5year.html" target="_blank" class="btn text-primary font-weight-bold" role="button">See more</a>
+               </div>
+            </div>
+            <div class="card m-2">
+               <img src="./logoicons/5-old.jpg" width="300px" height="300px" alt="img1" >
+               <div class="card-body">
+                  <h5 class="card-title">Toys for (6-10) years above</h5>
+                  <p class="card-text">click below to view more</p>
+               </div>
+               <div class="card-footer">
+                  <a href="./htmlpages/6to10year.html" target="_blank" class="btn text-primary font-weight-bold" role="button">See more</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- shop-by-age-end -->
+      <!-- new-arrival -->
+      <div class="container" style="margin-top: 100px;">
+         <h1 class="latest_toys text-white" style="font-family: 'Lobster', cursive;">New Arrivals</h1>
+      </div>
+      <div class="mt-5 jumbotron bg-white">
+         <div class="row mt-3 mr-5 justify-content-center">
+            <div class="card ml-4 mt-3 " style="width: 250px;">
+               <img src="./Images/mattel5.jpeg" height="200px">
+               <div style="top: 15px; left: 0px; position: absolute;">
+                <span class="bg-primary p-1 text-white" style="font-size: smaller;">-10%</span>
+             </div>
+               <div class="card-body">
+                  <h3 class="card-title">WWE®Wrekkin Slambulance™</h3>
+                  <h5 class="card-text text-primary"><del class="text-secondary">Rs <b>3,400 </b></del> &nbsp;Rs <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal"  data-toggle="tooltip" data-target="#myModal5" title="Quick view"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart5" name="wishlist" value="1" />
+                           <label class = "full" id="tool5" data-toggle="tooltip" for="heart5"><i class="fas fa-heart"></i></label>
+                           <script>
+                              $(document).ready(function()
+                              {
+                                  $('#tool5').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal5" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel5.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">WWE®Wrekkin'™ Slambulance™</h2>
+                              <br>
+                              <p>Get wrekkin' and rolling with the WWE Slambulance vehicle featuring 8+ breakaway pieces for the ultimate wrekkin' action! <br>
+                                 Wrekk the side panels, doors, bumper, light panel, hood, top and a breakaway side that leads to the stretcher inside the vehicle!
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star21" name="rating" value="1" />
+                                    <label class = "full" for="star21"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star22" name="rating" value="2" />
+                                    <label class = "full" for="star22"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star23" name="rating" value="3" />
+                                    <label class = "full" for="star23"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star24" name="rating" value="4" />
+                                    <label class = "full" for="star24"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star25" name="rating" value="5" />
+                                    <label class = "full" for="star25"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel6.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title">Marine Rescue Shark Ship</h3>
+                  <h5 class="card-text text-primary">Rs <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart" ><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal6"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart6" name="wishlist" value="1" />
+                           <label class = "full" id="tool6" for="heart6" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function()
+                              {
+                                  $('#tool6').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal6" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel6.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Marine Rescue Shark Ship</h2>
+                              <br>
+                              <p>Mega-sized ship floats in water and rolls on land for double the fun! <br>
+                                 Kids will love rescuing their cars from the sneaky car-chomping shark. <br>
+                                 The play continues from the tabletop to the tub. <br>
+                                 Includes a crane arm, chomping shark, helicopter toy, water cannon and floating raft.
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star26" name="rating" value="1" />
+                                    <label class = "full" for="star26"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star27" name="rating" value="2" />
+                                    <label class = "full" for="star27"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star28" name="rating" value="3" />
+                                    <label class = "full" for="star28"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star29" name="rating" value="4" />
+                                    <label class = "full" for="star29"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star30" name="rating" value="5" />
+                                    <label class = "full" for="star30"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel7.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title"> Star Wars The Child Plush Toy</h3>
+                  <h5 class="card-text text-primary">RS <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal7"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart7" name="wishlist" value="1" />
+                           <label class = "full" id="tool7" for="heart7" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function()
+                              {
+                                  $('#tool7').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal7" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel7.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Star Wars The Child Plush Toy</h2>
+                              <br>
+                              <p>Inspired by the Disney+ series The Mandalorian, the adorable figure with green skin, big ears and large eyes resembles a baby Yoda but is referred to as The Child. <br>
+                                 The toy plush has a soft body, plus a sturdy base filled with beans, perfect for cuddling or display as a collectible.
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star31" name="rating" value="1" />
+                                    <label class = "full" for="star31"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star32" name="rating" value="2" />
+                                    <label class = "full" for="star32"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star33" name="rating" value="3" />
+                                    <label class = "full" for="star33"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star34" name="rating" value="4" />
+                                    <label class = "full" for="star34"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star35" name="rating" value="5" />
+                                    <label class = "full" for="star35"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel8.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title">The Rise of Gru Minion Missile</h3>
+                  <h5 class="card-text text-primary">RS <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal8"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart8" name="wishlist" value="1" />
+                           <label class = "full" id="tool8" for="heart8" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function()
+                              {
+                                  $('#tool8').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal8" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel8.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Minions: The Rise of Gru Minion Missile</h2>
+                              <br>
+                              <p>​Minion Missile delivers two modes of play: as a dart launching vehicle and a blaster. <br>
+                                 Fires included foam Minion darts up to 25 feet. <br>
+                                 Manually advancing chamber for hands on play. <br>
+                                 Creative storytelling and combat fun in one toy.
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star36" name="rating" value="1" />
+                                    <label class = "full" for="star36"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star37" name="rating" value="2" />
+                                    <label class = "full" for="star37"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star38" name="rating" value="3" />
+                                    <label class = "full" for="star38"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star39" name="rating" value="4" />
+                                    <label class = "full" for="star39"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star40" name="rating" value="5" />
+                                    <label class = "full" for="star40"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- new-arrival-end -->
+      <!--top-selling-toys -->
+      <div class="container" style="margin-top: 100px;">
+         <h1 class="latest_toys text-white" style="font-family: 'Lobster', cursive;">Top Selling Toys</h1>
+      </div>
+      </section>
+      <div class="mt-5 jumbotron bg-white">
+         <div class="row mr-5 justify-content-center">
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel1.jpeg" height="200px">
+               <div style="top: 15px; left: 0px; position: absolute;">
+                <span class="bg-primary p-1 text-white" style="font-size: smaller;">-10%</span>
+             </div>
+               <div class="card-body">
+                  <h3 class="card-title"> Pollyville®Mega Mall</h3>
+                  <h5 class="card-text text-primary"><del class="text-secondary">Rs <b>3,400 </b></del> &nbsp;Rs <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal"  data-toggle="tooltip" data-target="#myModal" title="Quick view"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart1" name="wishlist" value="1" />
+                           <label class = "full" id="tool" data-toggle="tooltip" for="heart1"><i class="fas fa-heart"></i></label>
+                           <script>
+                              $(document).ready(function()
+                              {
+                                  $('#tool').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel1.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Pollyville®Mega Mall</h2>
+                              <br>
+                              <p>​There's so much to see and do at the Pollyville™ Mega Mall featuring 6 floors of fun, play pieces to customize the experience and a parking garage with vehicle, too! </p>
+                              <p>​Includes Pollyville™ Mega Mall with 6 floors/play areas, play pieces, parking garage, vehicle, micro Polly™ and Lila™ dolls, Peaches the dog, sticker sheet and accessories.</p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star1" name="rating" value="1" />
+                                    <label class = "full" for="star1"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star2" name="rating" value="2" />
+                                    <label class = "full" for="star2"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star3" name="rating" value="3" />
+                                    <label class = "full" for="star3"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star4" name="rating" value="4" />
+                                    <label class = "full" for="star4"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star5" name="rating" value="5" />
+                                    <label class = "full" for="star5"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel2.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title">Rocky The Robot Truck™</h3>
+                  <h5 class="card-text text-primary">Rs <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart" ><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal2"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart2" name="wishlist" value="1" />
+                           <label class = "full" id="tool2" for="heart2" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function()
+                              {
+                                  $('#tool2').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal2" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel2.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Rocky The Robot Truck™</h2>
+                              <br>
+                              <p>Rocky The Robot Truck ™, the dump truck with a big personality! <br>
+                                 Sensors and motorized movement bring Rocky The Robot Truck ™ to life. <br>
+                                 He speaks over 100 phrases talking, interacting with kids, and even telling jokes. <br>
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star6" name="rating" value="1" />
+                                    <label class = "full" for="star6"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star7" name="rating" value="2" />
+                                    <label class = "full" for="star7"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star8" name="rating" value="3" />
+                                    <label class = "full" for="star8"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star9" name="rating" value="4" />
+                                    <label class = "full" for="star9"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star10" name="rating" value="5" />
+                                    <label class = "full" for="star10"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel3.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title">Masters Of The Universe®</h3>
+                  <h5 class="card-text text-primary">RS <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal3"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart3" name="wishlist" value="1" />
+                           <label class = "full" id="tool3" for="heart3" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function()
+                              {
+                                  $('#tool3').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal3" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel3.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Masters Of The Universe®</h2>
+                              <br>
+                              <p>Large Castle Grayskull® is a thrilling MOTU® playset for fans who love to play out Masters of the Universe® adventures! <br>
+                                 Fits all 5.5-inch Origins figures and comes with a special edition Temple of Darkness Sorce​ress® figure unique to this playset
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star11" name="rating" value="1" />
+                                    <label class = "full" for="star11"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star12" name="rating" value="2" />
+                                    <label class = "full" for="star12"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star13" name="rating" value="3" />
+                                    <label class = "full" for="star13"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star14" name="rating" value="4" />
+                                    <label class = "full" for="star14"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star15" name="rating" value="5" />
+                                    <label class = "full" for="star15"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="card ml-4 mt-3" style="width: 250px;">
+               <img src="./Images/mattel4.jpeg" height="200px">
+               <div class="card-body">
+                  <h3 class="card-title">Flying Fabulous Jet™</h3>
+                  <h5 class="card-text text-primary">RS <b>2,000</b></h5>
+                  <br>
+                  <div class="row">
+                     <div class="col-md-7">
+                        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                     </div>
+                     <div class="col-md-2">
+                        <a href="" class="eye" data-toggle="modal" data-target="#myModal4"><i class="fas fa-eye fa-lg"></i></a>
+                        <script>
+                           $(document).ready(function()
+                           {
+                               $('.eye').tooltip({title:"Quick view",animation:true});
+                           });
+                        </script>
+                     </div>
+                     <div class="col-md-3">
+                        <div class="wish">
+                           <input type="checkbox" id="heart4" name="wishlist" value="1" />
+                           <label class = "full" id="tool4" for="heart4" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                           <script>$(document).ready(function(){
+                              $('#tool4').tooltip({title:"Add to wishlist",animation:true});
+                              });
+                           </script>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="myModal4" role="dialog">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                     <div class="modal-header border-0">
+                        <a type="button" class="close" data-dismiss="modal">&times;</a>
+                     </div>
+                     <div class="modal-body">
+                        <div class="row justify-content-between">
+                           <div class="col-lg-6">
+                              <div>
+                                 <img src="./Images/mattel4.jpeg" width="380px" height="425px">
+                              </div>
+                           </div>
+                           <div class="col-lg-6">
+                              <i class="float-right fas fa-check text-success"> In Stock</i><br>
+                              <h2 class="modal-title">Flying Fabulous Jet™</h2>
+                              <br>
+                              <p>​Get ready for takeoff with the larger-sized Polly Pocket™ Flying Fabulous Jet featuring 3-in/7.62-cm Polly™ doll dressed in her captain's uniform.
+                                 Also includes an extra dress, hanger, carryon bag and luggage for the trip. <br> Additional accessories include headphones, water bottle, 2 popcorns and 2 drinks
+                              </p>
+                              <h5>RS 2,000</h5>
+                              <br>
+                              <div class="btn-group" role="group">
+                                 <button class="quantity-left-minus btn btn-dark">-</button>
+                                 <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                 <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+                              <div>
+                                 <fieldset class="rating">
+                                    <br>
+                                    <caption>Reviews | </caption>
+                                    <input type="radio" id="star16" name="rating" value="1" />
+                                    <label class = "full" for="star16"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star17" name="rating" value="2" />
+                                    <label class = "full" for="star17"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star18" name="rating" value="3" />
+                                    <label class = "full" for="star18"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star19" name="rating" value="4" />
+                                    <label class = "full" for="star19"><i class="fas fa-star mt-2 p-1"></i></label>
+                                    <input type="radio" id="star20" name="rating" value="5" />
+                                    <label class = "full" for="star20"><i class="fas fa-star mt-2 p-1"></i></label>
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--top-selling-toys-end -->
+      <!-- footer -->
+      <div class="jumbotron bg-white">
+         <div>
+            <h2>
+               <i class="far fa-envelope"></i>
+               <strong>Leave</strong> A Message
+            </h2>
+            <br><br>
+            <form action="" method="GET">
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <input class="form-control" type="text" name="name" required="required" placeholder="Name">
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="form-group">
+                        <input class="form-control" type="email" name="email" required="required" placeholder="Email">
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="form-group">
+                        <textarea placeholder="Message" class="form-control" name="message" cols="30" rows="5"></textarea>
+                     </div>
+                  </div>
+                  <div class="col-md-12">
+                     <div>
+                        <button class="btn btn-outline-primary btn-lg font-weight-bold"> Send Message</button>
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+      <div class="container-fluid p-5 bg-light">
+      <footer class="p-2">
+      <div class="row">
+         <div class="col-sm-3" style="margin-top: -20px;">
+            <ul class="list-group" style="list-style-type: none;">
+               <li class="list-item mb-3"><img src="./Images/mainlogo.png" height="80px" width="200px" ></li>
+               <li class="list-item">A108 Adam Street New York, NY 535022 United States
+               </li>
+               <li class="list-item mt-3"><strong>Phone: </strong>+1 5589 55488 55</li>
+               <li class="list-item mt-3"><strong>Email: </strong>info@Example.com</li>
+            </ul>
+         </div>
+         <div class="col-sm-3">
+            <ul class="list-group" style="list-style-type: none;">
+               <li class="list-link">
+                  <h4>Usefull links</h4>
+               </li>
+               <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" target="_self" class="" style="text-decoration: none; font-size: larger;">Home</a></li>
+               <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="./htmlpages/aboutus.html" target="_blank" class="" style="text-decoration: none; font-size: larger;">About</a></li>
+               <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="./htmlpages/contactus.html" target="_blank" class="" style="text-decoration: none; font-size: larger;">Contact</a></li>
+               <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="#shop_modal" data-toggle="modal" class="" style="text-decoration: none; font-size: larger;">Shop</a></li>
+
+            </ul>
+         </div>
+         <div class="col-sm-3">
+            <ul class="list-group" style="list-style-type: none;">
+               <li class="list-group-link">
+                  <h4>Our Services</h4>
+               </li>
+               <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Free shipping</a></li>
+               <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Exchange facility</a></li>
+               <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">On time delivery</a></li>
+               <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Verified sellers</a></li>
+               <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Garrented product</a></li>
+            </ul>
+         </div>
+         <div class="col-sm-3">
+            <ul class="list-group" style="list-style-type: none;">
+               <li class="list-link">
+                  <h4>Our Social Networks</h4>
+               </li>
+               <li class="list-link mb-2">Join us on Facebook,Instagram, Whatsapp</li>
+            </ul> <br>
+            <a href="#" class=" ml-2"><i class="fab fa-instagram fa-3x"></i></a> 
+            <a href="#" class=" ml-2"><i class="fab fa-facebook-square fa-3x" ></i></a>
+            <a href="#" class=" ml-2"><i class='fab fa-whatsapp fa-3x'></i></a>
+         </div>
+      </div>
+
+      </footer>
+      </div>
+
+      <div class="jumbotron-fluid p-1 bg-primary text-center text-white font-weight-bold">
+         <p class="mt-3">Copyright &copy; 2021 Website | All Rights Reserved.</p>
+      </div>
+      <!-- footer -->
+      <style>
+
+        
+      .show-992
+      {
+         display: none;
+      }
+        @media (max-width:992px)
+         {
+          .show-992
+          {
+            display: block;
+          }
+          .navbar.navbar-expand-lg.bg-primary
+          {
+            display: none;
+          }
+        }
+
+      
+
+      </style>
+      <!-- down-to-top-button -->
+      <button class="btn btn-primary" id="mybtn" onclick="functiontop()" ><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+      <!-- down-to-top-button -->
+<script>
+var mybutton = document.getElementById("mybtn");
+// when will be button show and hidden.
+window.onscroll = function(){btndisplay()};
+
+function btndisplay() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+    {
+        mybutton.style.display = "block";
+    }
+    else
+    {
+        mybutton.style.display = "none";
+    }
+}
+function functiontop() {
+    document.body.scrollTop = 0;    
+    document.documentElement.scrollTop = 0;    
+}
+      </script>
+   
+</body>
+</html>

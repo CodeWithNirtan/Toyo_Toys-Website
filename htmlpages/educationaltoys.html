@@ -1,0 +1,1602 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Educational Toys </title>
+      <link rel="shortcut icon" type="image/png" href="../Images/teddy_bear.png">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/c1115e2cf1.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../cssfiles/mainpage.css.css">
+      <script src="../Javascript/mainpage.js"></script>
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      
+   
+   <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav ml-5 ">
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_self" href="../index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3"  href="#shop_modal" data-toggle="modal"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+            <!-- shop-modal-start -->
+            <div id="shop_modal" class="modal fade"  role="dialog" style="background: transparent;">
+               <div class="modal-dialog modal-lg" role="document" >
+                  <div class="modal-content bg-dark" >
+                     <div class="modal-header">
+                        <h4 class="modal-title login_form">Locate us on Google map</h4>
+                        <input type="button" data-dismiss="modal" class="btn btn-danger float-right mt-3"  value="&times">
+                     </div>
+                     <div class="modal-body">
+                        <div id="formap"style="width: 100%; height: 500px;"></div>                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDevD16r-TlxIkyo_r20JTGryD1GEVlIqg&callback=myMap"></script>
+<!-- shop-modal-end -->
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="../htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us  </a></li>
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="../htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+         </ul>
+         <ul class="nav navbar-nav ml-auto">
+            <form class="form-inline">
+               <input type="search" class="form-control" style="height: 30px;" placeholder="Search...">&nbsp;
+               <button type="submit" class="btn btn-outline-dark btn-sm"><i class="fas fa-search"></i></button>
+           </form>&nbsp;&nbsp;&nbsp;
+           <li class="nav-item mr-3"><a class="nav-link navbar_text3" href="#loginmodal" data-toggle="modal" ><i class="fas fa-user"></i> Login</a></li>
+
+           <!-- login-modal-start -->
+           <div class="modal fade" role="dialog-box" id="loginmodal">
+              <div class="modal-dialog  shadow" style="border-radius: 5px;">
+                 <div class="modal-content">
+                    <div class="modal-header bg-dark"><h4 class="login_form">Login</h4>
+                    <a href="#" role="button" class="btn btn-danger login_form" data-dismiss="modal">&times;</a>
+                    </div>
+                    <div class="modal-body">
+                       <form action=".php" method="get" name="myform">
+                          <div class="input-group">
+                             <div class="input-group-prepend">
+                                <span class="input-group-text login_form">User Email</span>
+                             </div>
+                             <input class="form-control" type="email" id="email" placeholder="Enter your Email"  required='required'>
+                             <script>
+                                $(document).ready(function(){
+                                   $('#email,#password').focus(function(){
+                                      $(this).css('background','lightblue')
+                                   });
+                                   $('#email,#password').blur(function(){
+                                      $(this).css('background','')
+                                   });
+                                });
+                             </script>
+                          </div>
+                          <div class="input-group mt-2">
+                             <div class="input-group-prepend">
+                                <span class="input-group-text login_form">Password</span>
+                             </div>
+                             <input class="form-control" type="password" id="password" required='required' placeholder="Enter your password" >
+                          </div>
+                       </form>
+                    </div>
+                    <div class="modal-footer bg-dark">
+                       <button type="submit" class="btn btn-success login_form ">Login</button>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!-- login-modal-end -->
+     </ul>
+      </div>
+   </nav>
+   <!-- second-header -->
+   <nav class="navbar navbar-expand-lg sticky-top bg-light">
+      <a href="../index.html" class="navbar-brand logo ml-lg-4 mt-3 "><img src="../images/mainlogo.png" width="250px" height="80px" > </a>
+      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsibleNavId" ><i class="fas fa-bars"></i></button>
+      <div class="collapse navbar-collapse justify-content-center mt-sm-4" id="collapsibleNavId">
+         <ul class="navbar-nav text-lg-center">
+            <li class="nav-item active  dropdown ">
+               <a class="nav-link dropdown navbar_text navbar_img" href="#" ><img src="../Images/shopbybrandlogos/brand.png" alt="imge" width="50px" height="50px" class=" text-center"><span class="d-lg-block">Shop by Brand</span></a>
+               <div class="dropdown-menu dropdown_menu bg-primary">
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Mattel.html" target="_blank"><span><img src="../images/toys brand logos/mattel.png" alt="logo" width="40p%" height="40%"></span> Mattle</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Nerf.html" target="_blank"><span><img src="../images/toys brand logos/nerf.png" alt="logo" width="40p%" height="40%"></span> Nerf</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Playsckool.html" target="_blank"><span><img src="../images/toys brand logos/playskool.png" alt="logo" width="40p%" height="40%"></span> playskool</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Hotwheels.html" target="_blank"><span><img src="../images/toys brand logos/hot-wheels.png" alt="logo" width="40p%" height="40%"></span> Hot wheel</a>
+               </div>
+            </li>
+            <li class="nav-item dropdown ">
+               <a href="#" class="nav-link dropdown navbar_text navbar_img"><img src="../agelogos/happiness.png" alt="imge" width="50px" height="50px" class=""><span class="d-lg-block">Shop by Age</span></a>
+               <div class="dropdown-menu dropdown_menu bg-primary"> 
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/5to6months.html"><img src="../logoicons/baby1.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 5-6 months</a>
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/1to5year.html"><img src="../logoicons/3-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 1-5 years</a>
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/6to10year.html"><img src="../logoicons/5-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 6-10 years</a>
+               </div>
+            </li>
+            <li class="nav-item ">
+               <a class="nav-link navbar_text navbar_img" target="_blank" href="../htmlpages/educationaltoys.html"><img src="../educationallogo/alphabet.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Educational Toys</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link navbar_text navbar_img" target="_blank" href="../htmlpages/bestseller.html"><img src="../topsellerlogo/best.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Best Sellers</span></a>
+            </li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="#" ><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us  </a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+         </ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <nav class="navbar">
+         <ul class="navbar-nav">
+            <a href="#" class=" btn_1"><i class="fas fa-heart text-danger fa-lg"> <input type="reset" value="0" class="btn btn-primary" max="1" min="0" ></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class=" btn_1"><i class="fas fa-shopping-basket text-primary fa-lg"> <input type="reset" value="0" class="btn btn-primary shop" max="1" min="0" ></i></a>
+         </ul>
+      </nav>
+   </div>
+   </nav>
+        <!-- page-header -->
+        <div class="container" style="margin-top: 100px;">
+          <h1 class="latest_toys text-white " style="font-family: 'Lobster', cursive;"> Educational  Toys <img src="../educationallogo/alphabet.png"  alt="imge" width="50px" height="50px" ></h1>
+      </div>
+      <!-- page-header-end -->
+
+      <div class="mt-5 jumbotron bg-white">
+
+        <div class="row mr-5 justify-content-center">
+            <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education1.jpg" height="200px">
+                 <div style="top: 15px; left: 0px; position: absolute;">
+                    <span class="bg-primary p-1 text-white" style="font-size: smaller;">-10%</span>
+                 </div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Math Operation Board</h3>
+                    <h5 class="card-text text-primary"><del class="text-secondary">Rs <b>3,400 </b></del> &nbsp;Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal"  data-toggle="tooltip" data-target="#myModal" title="Quick view"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart1" name="wishlist" value="1" />
+                    <label class = "full" id="tool" data-toggle="tooltip" for="heart1"><i class="fas fa-heart"></i></label>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('#tool').tooltip({title:"Add to wishlist",animation:true});
+                        });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education1.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Math Operation Board</h2><br>
+            
+                               <p>
+                                It is one of the best stacking toys to learn numbers, counting, color and number sorting and matching.  <br>
+                                This toy aims at teaching the concepts of color and number, promoting eye and hand coordination. <br>
+                                It can be used as teaching tools for home schooling or early childhood development
+                                </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star1" name="rating" value="1" />
+                                   <label class = "full" for="star1"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star2" name="rating" value="2" />
+                                   <label class = "full" for="star2"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star3" name="rating" value="3" />
+                                   <label class = "full" for="star3"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star4" name="rating" value="4" />
+                                   <label class = "full" for="star4"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star5" name="rating" value="5" />
+                                   <label class = "full" for="star5"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education2.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Creative Brain Growth Game</h3>
+                    <h5 class="card-text text-primary">Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart" ><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal2"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    
+                    <input type="checkbox" id="heart2" name="wishlist" value="1" />
+                    <label class = "full" id="tool2" for="heart2" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool2').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal2" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education2.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Creative Brain Growth Game</h2><br>
+            
+                               <p>
+                                Make creative faces, designs,patterns with this Toy.This helps to improve hand co-ordination thinking skills.This helps to increase Imagination power of kids. <br>
+                                Hours and hours of creativity.
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star6" name="rating" value="1" />
+                                   <label class = "full" for="star6"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star7" name="rating" value="2" />
+                                   <label class = "full" for="star7"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star8" name="rating" value="3" />
+                                   <label class = "full" for="star8"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star9" name="rating" value="4" />
+                                   <label class = "full" for="star9"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star10" name="rating" value="5" />
+                                   <label class = "full" for="star10"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education3.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Magnetic Digital Train</h3>
+                    <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal3"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart3" name="wishlist" value="1" />
+                    <label class = "full" id="tool3" for="heart3" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool3').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+              <div class="modal fade" id="myModal3" role="dialog">
+      
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-header border-0">
+
+          <a type="button" class="close" data-dismiss="modal">&times;</a>
+
+        </div>
+
+        <div class="modal-body">
+                  
+            <div class="row justify-content-between">
+               
+               <div class="col-lg-6">
+                   <div>
+                       <img src="../Images/education3.jpg" width="380px" height="425px">
+                   </div>
+               </div>
+
+               <div class="col-lg-6">
+                   <i class="float-right fas fa-check text-success"> In Stock</i><br>
+
+                   <h2 class="modal-title">Magnetic Digital Train</h2><br>
+
+                   <p>
+                    The wooden magnetic train set can help your child learn digital understanding, stimulate children’s control, imagination and creativity, and exercise skills. It will develop the child’s fine movements and hand-eye coordination. <br>
+
+                   </p>
+                   <h5>RS 2,000</h5><br>
+                   <div class="btn-group" role="group">
+                       <button class="quantity-left-minus btn btn-dark">-</button>
+                       <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                       <button class="quantity-right-plus btn btn-dark">+</button>
+                  </div>
+
+                  <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+
+                  <div>
+                   <fieldset class="rating"><br>
+
+                       <caption>Reviews | </caption>
+
+                       <input type="radio" id="star11" name="rating" value="1" />
+                       <label class = "full" for="star11"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star12" name="rating" value="2" />
+                       <label class = "full" for="star12"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star13" name="rating" value="3" />
+                       <label class = "full" for="star13"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star14" name="rating" value="4" />
+                       <label class = "full" for="star14"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star15" name="rating" value="5" />
+                       <label class = "full" for="star15"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                   </fieldset>
+               </div>
+               </div>
+
+               
+               </div>
+            </div>
+   
+      </div>
+    </div>
+  </div>
+
+  <div class="card border ml-4 mt-3" style="width: 250px;">
+
+    <img src="../Images/education4.jpg" height="200px">
+
+    <div class="card-body">
+        <h3 class="card-title">Wooden Learning Clock</h3>
+        <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+        <div class="row">
+    <div class="col-md-7">
+        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+    </div>
+
+    <div class="col-md-2">
+
+        <a href="" class="eye" data-toggle="modal" data-target="#myModal4"><i class="fas fa-eye fa-lg"></i></a>
+        <script>
+            $(document).ready(function()
+            {
+                $('.eye').tooltip({title:"Quick view",animation:true});
+            });
+        </script>
+    </div>
+<div class="col-md-3">
+    <div class="wish">
+        <input type="checkbox" id="heart4" name="wishlist" value="1" />
+        <label class = "full" id="tool4" for="heart4" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+        <script>$(document).ready(function(){
+            $('#tool4').tooltip({title:"Add to wishlist",animation:true});
+        });
+        </script>
+    </div>
+</div>
+        </div>
+    </div>
+    
+
+</div>
+
+            <div class="modal fade" id="myModal4" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education4.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Wooden Learning Clock</h2><br>
+            
+                                <p>
+                                   We Clear The Concept of Hour / Minuites  & Seconds <br>
+                                   I Have Colorfull Cognitic Blocks Play Lacing Beads With Me Also Backgroud Written Like 1 = One <br>
+                                   My Material Is Wood Wooden base board printed with colorful pictures and number names With Clock...
+                                </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star16" name="rating" value="1" />
+                                   <label class = "full" for="star16"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star17" name="rating" value="2" />
+                                   <label class = "full" for="star17"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star18" name="rating" value="3" />
+                                   <label class = "full" for="star18"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star19" name="rating" value="4" />
+                                   <label class = "full" for="star19"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star20" name="rating" value="5" />
+                                   <label class = "full" for="star20"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+        </div>
+
+
+
+        <div class="row mt-3 mr-5 justify-content-center">
+            <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education5.jpg" height="200px">
+                 <div style="top: 15px; left: 0px; position: absolute;">
+                    <span class="bg-primary p-1 text-white" style="font-size: smaller;">-10%</span>
+                 </div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Magnetic Writing Pad</h3>
+                    <h5 class="card-text text-primary"><del class="text-secondary">Rs <b>3,400 </b></del> &nbsp;Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal"  data-toggle="tooltip" data-target="#myModal5" title="Quick view"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart5" name="wishlist" value="1" />
+                    <label class = "full" id="tool5" data-toggle="tooltip" for="heart5"><i class="fas fa-heart"></i></label>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('#tool5').tooltip({title:"Add to wishlist",animation:true});
+                        });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal5" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education5.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Magnetic Writing Pad</h2><br>
+            
+                               <p>
+                                Magpad Is a New Kind Of Magnetic Educational Writing Board, Use Your Own Imagination. It Can Develop Children’s Painting, Designing, And Writing Skills And Talent. <br>
+                                Safe and Durable: The electronic drawing tablet is made of high quality LCD material, no blue light, no radiation, anti-fall.
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star21" name="rating" value="1" />
+                                   <label class = "full" for="star21"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star22" name="rating" value="2" />
+                                   <label class = "full" for="star22"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star23" name="rating" value="3" />
+                                   <label class = "full" for="star23"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star24" name="rating" value="4" />
+                                   <label class = "full" for="star24"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star25" name="rating" value="5" />
+                                   <label class = "full" for="star25"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education6.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Geometrical Shapes 5 in 1</h3>
+                    <h5 class="card-text text-primary">Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart" ><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal6"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    
+                    <input type="checkbox" id="heart6" name="wishlist" value="1" />
+                    <label class = "full" id="tool6" for="heart6" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool6').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal6" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education6.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Geometrical Shapes 5 in 1</h2><br>
+            
+                               <p>
+                                5 In 1 Geometrical Shapes having 4 pieces of 5 different shapes. <br>
+                                It contains different numbers of holes which should be set on wooden tray according to the given holes in shape.Every same shape having same number of holes.
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star26" name="rating" value="1" />
+                                   <label class = "full" for="star26"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star27" name="rating" value="2" />
+                                   <label class = "full" for="star27"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star28" name="rating" value="3" />
+                                   <label class = "full" for="star28"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star29" name="rating" value="4" />
+                                   <label class = "full" for="star29"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star30" name="rating" value="5" />
+                                   <label class = "full" for="star30"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education7.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Four Column Set</h3>
+                    <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal7"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart7" name="wishlist" value="1" />
+                    <label class = "full" id="tool7" for="heart7" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool7').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+              <div class="modal fade" id="myModal7" role="dialog">
+      
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-header border-0">
+
+          <a type="button" class="close" data-dismiss="modal">&times;</a>
+
+        </div>
+
+        <div class="modal-body">
+                  
+            <div class="row justify-content-between">
+               
+               <div class="col-lg-6">
+                   <div>
+                       <img src="../Images/education7.jpg" width="380px" height="425px">
+                   </div>
+               </div>
+
+               <div class="col-lg-6">
+                   <i class="float-right fas fa-check text-success"> In Stock</i><br>
+
+                   <h2 class="modal-title">Four Column Set</h2><br>
+
+                    <p>
+                       This Wood Toy helps build Kids’ Hand Eye Coordination, Math, Early Shape,Color and Size differentiation skills,
+                       Ability training: manual brain power, interest training, parent-child communication, interactive toys, grasping.
+                       Advantages: not only can stimulate the child’s imagination, but also enjoy the happy time with the child
+                    </p>
+                   <h5>RS 2,000</h5><br>
+                   <div class="btn-group" role="group">
+                       <button class="quantity-left-minus btn btn-dark">-</button>
+                       <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                       <button class="quantity-right-plus btn btn-dark">+</button>
+                  </div>
+
+                  <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+
+                  <div>
+                   <fieldset class="rating"><br>
+
+                       <caption>Reviews | </caption>
+
+                       <input type="radio" id="star31" name="rating" value="1" />
+                       <label class = "full" for="star31"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star32" name="rating" value="2" />
+                       <label class = "full" for="star32"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star33" name="rating" value="3" />
+                       <label class = "full" for="star33"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star34" name="rating" value="4" />
+                       <label class = "full" for="star34"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star35" name="rating" value="5" />
+                       <label class = "full" for="star35"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                   </fieldset>
+               </div>
+               </div>
+
+               
+               </div>
+            </div>
+   
+      </div>
+    </div>
+  </div>
+
+  <div class="card border ml-4 mt-3" style="width: 250px;">
+
+    <img src="../Images/education8.jpg" height="200px">
+
+    <div class="card-body">
+        <h3 class="card-title">Spelling Game For Toddler</h3>
+        <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+        <div class="row">
+    <div class="col-md-7">
+        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+    </div>
+
+    <div class="col-md-2">
+
+        <a href="" class="eye" data-toggle="modal" data-target="#myModal8"><i class="fas fa-eye fa-lg"></i></a>
+        <script>
+            $(document).ready(function()
+            {
+                $('.eye').tooltip({title:"Quick view",animation:true});
+            });
+        </script>
+    </div>
+<div class="col-md-3">
+    <div class="wish">
+        <input type="checkbox" id="heart8" name="wishlist" value="1" />
+        <label class = "full" id="tool8" for="heart8" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+        <script>$(document).ready(function()
+        {
+            $('#tool8').tooltip({title:"Add to wishlist",animation:true});
+        });
+        </script>
+    </div>
+</div>
+        </div>
+    </div>
+    
+
+</div>
+
+            <div class="modal fade" id="myModal8" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education8.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Spelling Game For Toddler</h2><br>
+            
+                               <p>​
+                                Developing practical ability, hand-brain coordination capacity. <br>
+                                Let your baby practice color recognition, word spelling, handwriting exercises and matching letters <br>
+                                52 wooden letters (2 x the alphabet), 56 words, 28 card.
+
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star36" name="rating" value="1" />
+                                   <label class = "full" for="star36"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star37" name="rating" value="2" />
+                                   <label class = "full" for="star37"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star38" name="rating" value="3" />
+                                   <label class = "full" for="star38"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star39" name="rating" value="4" />
+                                   <label class = "full" for="star39"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star40" name="rating" value="5" />
+                                   <label class = "full" for="star40"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+        </div>
+
+
+        <div class="row mt-3 mr-5 justify-content-center">
+            <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education9.jpg" height="200px">
+                 <div style="top: 15px; left: 0px; position: absolute;">
+                    <span class="bg-primary p-1 text-white" style="font-size: smaller;">-10%</span>
+                 </div>
+
+                <div class="card-body">
+                    <h3 class="card-title">Alphabet wooden Cards</h3>
+                    <h5 class="card-text text-primary"><del class="text-secondary">Rs <b>3,400 </b></del> &nbsp;Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal"  data-toggle="tooltip" data-target="#myModal9" title="Quick view"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart9" name="wishlist" value="1" />
+                    <label class = "full" id="tool9" data-toggle="tooltip" for="heart9"><i class="fas fa-heart"></i></label>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('#tool9').tooltip({title:"Add to wishlist",animation:true});
+                        });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal9" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education9.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Alphabet wooden Card</h2><br>
+            
+                                <p>
+                                   Encourages independent, self-paced learning <br>
+                                   Develops early letter and sequencing skills necessary for school success Product description: <br>
+                                   All the parts are processed by smooth polished and softly rounded edges, safe for children.Developing practical ability, hand-brain coordination capacity.
+                                </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star41" name="rating" value="1" />
+                                   <label class = "full" for="star41"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star42" name="rating" value="2" />
+                                   <label class = "full" for="star42"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star43" name="rating" value="3" />
+                                   <label class = "full" for="star43"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star44" name="rating" value="4" />
+                                   <label class = "full" for="star44"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star45" name="rating" value="5" />
+                                   <label class = "full" for="star45"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education10.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Tie Shoe Lacing Toy</h3>
+                    <h5 class="card-text text-primary">Rs <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart" ><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal10"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    
+                    <input type="checkbox" id="heart10" name="wishlist" value="1" />
+                    <label class = "full" id="tool10" for="heart10" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool10').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <div class="modal fade" id="myModal10" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education10.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Tie Shoe Lacing Toy</h2><br>
+            
+                               <p>
+                                This lacing toy helps to develop kid’s hand-eye coordination, fine motor skills <br>
+                                Wood shoe tie practice toys, best toys that parents could use to teach kids how to tie shoes. <br>
+                                Exercise children’s hand-eye coordination Wooden Toy for Learning to tie shoelaces.
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star46" name="rating" value="1" />
+                                   <label class = "full" for="star46"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star47" name="rating" value="2" />
+                                   <label class = "full" for="star47"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star48" name="rating" value="3" />
+                                   <label class = "full" for="star48"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star49" name="rating" value="4" />
+                                   <label class = "full" for="star49"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star50" name="rating" value="5" />
+                                   <label class = "full" for="star50"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+
+              <div class="card border ml-4 mt-3" style="width: 250px;">
+
+                <img src="../Images/education11.jpg" height="200px">
+
+                <div class="card-body">
+                    <h3 class="card-title">Wooden Number Puzzle</h3>
+                    <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+                    <div class="row">
+                <div class="col-md-7">
+                    <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+                </div>
+
+                <div class="col-md-2">
+
+                    <a href="" class="eye" data-toggle="modal" data-target="#myModal11"><i class="fas fa-eye fa-lg"></i></a>
+                    <script>
+                        $(document).ready(function()
+                        {
+                            $('.eye').tooltip({title:"Quick view",animation:true});
+                        });
+                    </script>
+                </div>
+            <div class="col-md-3">
+                <div class="wish">
+                    <input type="checkbox" id="heart11" name="wishlist" value="1" />
+                    <label class = "full" id="tool11" for="heart11" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+                    <script>$(document).ready(function()
+                    {
+                        $('#tool11').tooltip({title:"Add to wishlist",animation:true});
+                    });
+                    </script>
+                </div>
+            </div>
+                    </div>
+                </div>
+                
+
+            </div>
+
+              <div class="modal fade" id="myModal11" role="dialog">
+      
+    <div class="modal-dialog modal-lg">
+
+      <div class="modal-content">
+
+        <div class="modal-header border-0">
+
+          <a type="button" class="close" data-dismiss="modal">&times;</a>
+
+        </div>
+
+        <div class="modal-body">
+                  
+            <div class="row justify-content-between">
+               
+               <div class="col-lg-6">
+                   <div>
+                       <img src="../Images/education11.jpg" width="380px" height="425px">
+                   </div>
+               </div>
+
+               <div class="col-lg-6">
+                   <i class="float-right fas fa-check text-success"> In Stock</i><br>
+
+                   <h2 class="modal-title">Wooden Number Puzzle</h2><br>
+
+                   <p>
+                    Cube Puzzles Are Rich In Color Matching,Attracting The Baby Attention And Satisfying The Child Perception Of Color.
+                    Each Puzzle Board Has Numbers And The Baby Can Recognize The Numbers When Playing. <br>
+                    Solid Three Dimensional Puzzle Game:The Pattern Is Composed Of Blocks.
+                   </p>
+                   <h5>RS 2,000</h5><br>
+                   <div class="btn-group" role="group">
+                       <button class="quantity-left-minus btn btn-dark">-</button>
+                       <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                       <button class="quantity-right-plus btn btn-dark">+</button>
+                  </div>
+
+                  <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+
+                  <div>
+                   <fieldset class="rating"><br>
+
+                       <caption>Reviews | </caption>
+
+                       <input type="radio" id="star51" name="rating" value="1" />
+                       <label class = "full" for="star51"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star52" name="rating" value="2" />
+                       <label class = "full" for="star52"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star53" name="rating" value="3" />
+                       <label class = "full" for="star53"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star54" name="rating" value="4" />
+                       <label class = "full" for="star54"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                       <input type="radio" id="star55" name="rating" value="5" />
+                       <label class = "full" for="star55"><i class="fas fa-star mt-2 p-1"></i></label>
+
+                   </fieldset>
+               </div>
+               </div>
+
+               
+               </div>
+            </div>
+   
+      </div>
+    </div>
+  </div>
+
+  <div class="card border ml-4 mt-3" style="width: 250px;">
+
+    <img src="../Images/education12.jpg" height="200px">
+
+    <div class="card-body">
+        <h3 class="card-title">Digital Calculation Bars</h3>
+        <h5 class="card-text text-primary">RS <b>2,000</b></h5><br>
+        <div class="row">
+    <div class="col-md-7">
+        <a href="" class="cart"><i class="fas fa-shopping-basket"></i> Add To Cart</a>
+    </div>
+
+    <div class="col-md-2">
+
+        <a href="" class="eye" data-toggle="modal" data-target="#myModal12"><i class="fas fa-eye fa-lg"></i></a>
+        <script>
+            $(document).ready(function()
+            {
+                $('.eye').tooltip({title:"Quick view",animation:true});
+            });
+        </script>
+    </div>
+<div class="col-md-3">
+    <div class="wish">
+        <input type="checkbox" id="heart12" name="wishlist" value="1" />
+        <label class = "full" id="tool12" for="heart12" data-toggle="tooltip" title="Add to wishlist"><i class="fas fa-heart"></i></label>
+        <script>$(document).ready(function(){
+            $('#tool12').tooltip({title:"Add to wishlist",animation:true});
+        });
+        </script>
+    </div>
+</div>
+        </div>
+    </div>
+    
+
+</div>
+
+            <div class="modal fade" id="myModal12" role="dialog">
+      
+                <div class="modal-dialog modal-lg">
+            
+                  <div class="modal-content">
+            
+                    <div class="modal-header border-0">
+            
+                      <a type="button" class="close" data-dismiss="modal">&times;</a>
+            
+                    </div>
+            
+                    <div class="modal-body">
+                              
+                        <div class="row justify-content-between">
+                           
+                           <div class="col-lg-6">
+                               <div>
+                                   <img src="../Images/education12.jpg" width="380px" height="425px">
+                               </div>
+                           </div>
+            
+                           <div class="col-lg-6">
+                               <i class="float-right fas fa-check text-success"> In Stock</i><br>
+            
+                               <h2 class="modal-title">Digital Calculation Bars</h2><br>
+            
+                               <p>
+                                It Helps To Improve Speedy Calculations In Your Children Mind <br>
+                                Groom Your Child With This Educational Product <br>
+                                It makes learning fun, stimulates children’s logical thinking, improves children hand eye coordination and learning ability..
+                               </p>
+                               <h5>RS 2,000</h5><br>
+                               <div class="btn-group" role="group">
+                                   <button class="quantity-left-minus btn btn-dark">-</button>
+                                   <input type="reset" class="quantity1"  min="1" max="6" name="quantity" value="1">
+                                   <button class="quantity-right-plus btn btn-dark">+</button>
+                              </div>
+            
+                              <input type="button" class="btn btn-dark carting" value="Add To Cart"/>
+            
+                              <div>
+                               <fieldset class="rating"><br>
+            
+                                   <caption>Reviews | </caption>
+            
+                                   <input type="radio" id="star56" name="rating" value="1" />
+                                   <label class = "full" for="star56"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star57" name="rating" value="2" />
+                                   <label class = "full" for="star57"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star58" name="rating" value="3" />
+                                   <label class = "full" for="star58"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star59" name="rating" value="4" />
+                                   <label class = "full" for="star59"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                                   <input type="radio" id="star60" name="rating" value="5" />
+                                   <label class = "full" for="star60"><i class="fas fa-star mt-2 p-1"></i></label>
+            
+                               </fieldset>
+                           </div>
+                           </div>
+            
+                           
+                           </div>
+                        </div>
+               
+                  </div>
+                </div>
+              </div>
+        </div>
+
+    </div>
+
+ <!-- footer-start -->
+ <div class="container-fluid p-5 bg-light">
+ <footer class="p-2">
+ <div class="row">
+    <div class="col-sm-3" style="margin-top: -20px;">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-item mb-3"><img src="../Images/mainlogo.png" height="80px" width="200px" ></li>
+          <li class="list-item">A108 Adam Street New York, NY 535022 United States
+          </li>
+          <li class="list-item mt-3"><strong>Phone: </strong>+1 5589 55488 55</li>
+          <li class="list-item mt-3"><strong>Email: </strong>info@Example.com</li>
+       </ul>
+    </div>
+    <div class="col-sm-3">
+        <ul class="list-group" style="list-style-type: none;">
+           <li class="list-link">
+              <h4>Usefull links</h4>
+           </li>
+           <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="../index.html" target="_self" class="" style="text-decoration: none; font-size: larger;">Home</a></li>
+           <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="./aboutus.html" target="_blank" class="" style="text-decoration: none; font-size: larger;">About</a></li>
+           <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="./contactus.html" target="_blank" class="" style="text-decoration: none; font-size: larger;">Contact</a></li>
+           <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="#shop_modal" data-toggle="modal" class="" style="text-decoration: none; font-size: larger;">Shop</a></li>
+
+        </ul>
+     </div>
+    <div class="col-sm-3">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-group-link">
+             <h4>Our Services</h4>
+          </li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Free shipping</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Exchange facility</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">On time delivery</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Verified sellers</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Garrented product</a></li>
+       </ul>
+    </div>
+    <div class="col-sm-3">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-link">
+             <h4>Our Social Networks</h4>
+          </li>
+          <li class="list-link mb-2">Join us on Facebook,Instagram, Whatsapp</li>
+       </ul> <br>
+       <a href="#" class=" ml-2"><i class="fab fa-instagram fa-3x"></i></a> 
+       <a href="#" class=" ml-2"><i class="fab fa-facebook-square fa-3x" ></i></a>
+       <a href="#" class=" ml-2"><i class='fab fa-whatsapp fa-3x'></i></a>
+    </div>
+ </div>
+
+ </footer>
+ </div>
+
+ <div class="jumbotron-fluid p-1 bg-primary text-center text-white font-weight-bold">
+    <p class="mt-3">Copyright &copy; 2021 Website | All Rights Reserved.</p>
+ </div>
+ <!-- footer -->
+  
+
+      <!-- down-to-top-button -->
+      <button class="btn btn-primary" id="mybtn" onclick="functiontop()" ><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+      <!-- down-to-top-button -->
+      <script>
+         var mybutton = document.getElementById("mybtn");
+         // when will be button show and hidden.
+         window.onscroll = function(){btndisplay()};
+         
+         function btndisplay() {
+             if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+             {
+                 mybutton.style.display = "block";
+             }
+             else
+             {
+                 mybutton.style.display = "none";
+             }
+         }
+         function functiontop() {
+             document.body.scrollTop = 0;    
+             document.documentElement.scrollTop = 0;    
+         }
+               </script>
+    </body>
+</html>

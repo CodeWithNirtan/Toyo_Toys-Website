@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>About us</title>
+      <link rel="shortcut icon" type="image/png" href="../Images/teddy_bear.png">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/c1115e2cf1.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../cssfiles/mainpage.css.css">
+      <script src="../Javascript/mainpage.js"></script>
+      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <style>
+         p{
+            color:gray;
+         }
+        
+      </style>
+   
+   <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="collapse navbar-collapse">
+         <ul class="nav navbar-nav ml-5 ">
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_self" href="../index.html" ><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3"  href="#shop_modal" data-toggle="modal"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+            <!-- shop-modal-start -->
+            <div id="shop_modal" class="modal fade"  role="dialog" style="background: transparent;">
+               <div class="modal-dialog modal-lg" role="document" >
+                  <div class="modal-content bg-dark" >
+                     <div class="modal-header">
+                        <h4 class="modal-title login_form">Locate us on Google map</h4>
+                        <input type="button" data-dismiss="modal" class="btn btn-danger float-right mt-3"  value="&times">
+                     </div>
+                     <div class="modal-body">
+                        <div id="formap"style="width: 100%; height: 500px;"></div>                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDevD16r-TlxIkyo_r20JTGryD1GEVlIqg&callback=myMap"></script>
+<!-- shop-modal-end -->
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="../htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us  </a></li>
+            <li class="nav-item mr-3"><a class="nav-link navbar_text3" target="_blank" href="../htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+         </ul>
+         <ul class="nav navbar-nav ml-auto">
+            <form class="form-inline">
+               <input type="search" class="form-control" style="height: 30px;" placeholder="Search...">&nbsp;
+               <button type="submit" class="btn btn-outline-dark btn-sm"><i class="fas fa-search"></i></button>
+           </form>&nbsp;&nbsp;&nbsp;
+           <li class="nav-item mr-3"><a class="nav-link navbar_text3" href="#loginmodal" data-toggle="modal" ><i class="fas fa-user"></i> Login</a></li>
+           <!-- login-modal-start -->
+           <div class="modal fade" role="dialog-box" id="loginmodal">
+              <div class="modal-dialog  shadow" style="border-radius: 5px;">
+                 <div class="modal-content">
+                    <div class="modal-header bg-dark"><h4 class="login_form">Login</h4>
+                    <a href="#" role="button" class="btn btn-danger login_form" data-dismiss="modal">&times;</a>
+                    </div>
+                    <div class="modal-body">
+                       <form action=".php" method="get" name="myform">
+                          <div class="input-group">
+                             <div class="input-group-prepend">
+                                <span class="input-group-text login_form">User Email</span>
+                             </div>
+                             <input class="form-control" type="email" id="email" placeholder="Enter your Email"  required='required'>
+                             <script>
+                                $(document).ready(function(){
+                                   $('#email,#password').focus(function(){
+                                      $(this).css('background','lightblue')
+                                   });
+                                   $('#email,#password').blur(function(){
+                                      $(this).css('background','')
+                                   });
+                                });
+                             </script>
+                          </div>
+                          <div class="input-group mt-2">
+                             <div class="input-group-prepend">
+                                <span class="input-group-text login_form">Password</span>
+                             </div>
+                             <input class="form-control" type="password" id="password" required='required' placeholder="Enter your password" >
+                          </div>
+                       </form>
+                    </div>
+                    <div class="modal-footer bg-dark">
+                       <button type="submit" class="btn btn-success login_form ">Login</button>
+                    </div>
+                 </div>
+              </div>
+           </div>
+           <!-- login-modal-end -->
+     </ul>
+      </div>
+   </nav>
+   <!-- second-header -->
+   <nav class="navbar navbar-expand-lg sticky-top bg-light">
+      <a href="../index.html" class="navbar-brand logo ml-lg-4 mt-3 "><img src="../images/mainlogo.png" width="250px" height="80px" > </a>
+      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapsibleNavId" ><i class="fas fa-bars"></i></button>
+      <div class="collapse navbar-collapse justify-content-center mt-sm-4" id="collapsibleNavId">
+         <ul class="navbar-nav text-lg-center">
+            <li class="nav-item active  dropdown ">
+               <a class="nav-link dropdown navbar_text navbar_img" href="#" ><img src="../Images/shopbybrandlogos/brand.png" alt="imge" width="50px" height="50px" class=" text-center"><span class="d-lg-block">Shop by Brand</span></a>
+               <div class="dropdown-menu dropdown_menu bg-primary">
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Mattel.html" target="_blank"><span><img src="../images/toys brand logos/mattel.png" alt="logo" width="40p%" height="40%"></span> Mattle</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Nerf.html" target="_blank"><span><img src="../images/toys brand logos/nerf.png" alt="logo" width="40p%" height="40%"></span> Nerf</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Playsckool.html" target="_blank"><span><img src="../images/toys brand logos/playskool.png" alt="logo" width="40p%" height="40%"></span> playskool</a>
+                  <a class="dropdown-item navbar_text2" href="../htmlpages/Hotwheels.html" target="_blank"><span><img src="../images/toys brand logos/hot-wheels.png" alt="logo" width="40p%" height="40%"></span> Hot wheel</a>
+               </div>
+            </li>
+            <li class="nav-item dropdown ">
+               <a href="#" class="nav-link dropdown navbar_text navbar_img"><img src="../agelogos/happiness.png" alt="imge" width="50px" height="50px" class=""><span class="d-lg-block">Shop by Age</span></a>
+               <div class="dropdown-menu dropdown_menu bg-primary"> 
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/5to6months.html"><img src="../logoicons/baby1.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 5-6 months</a>
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/1to5year.html"><img src="../logoicons/3-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 1-5 years</a>
+                  <a class="dropdown-item navbar_text2" target="_blank" href="../htmlpages/6to10year.html"><img src="../logoicons/5-old.jpg" class="rounded-circle" width="40px" height="40px" alt=""> 6-10 years</a>
+               </div>
+            </li>
+            <li class="nav-item ">
+               <a class="nav-link navbar_text navbar_img" target="_blank" href="../htmlpages/educationaltoys.html"><img src="../educationallogo/alphabet.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Educational Toys</span></a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link navbar_text navbar_img" target="_blank" href="../htmlpages/bestseller.html"><img src="../topsellerlogo/best.png" alt="imge" width="50px" height="50px" ><span class="d-lg-block">Best Sellers</span></a>
+            </li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="#" ><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/contactus.html"><i class="fas fa-phone-alt"></i> Contact us  </a></li>
+            <li class="nav-item mr-3 show-992"><a class="nav-link navbar_text4" target="_blank" href="../htmlpages/aboutus.html"><i class="fas fa-info-circle"></i> About us</a></li>
+         </ul>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      <nav class="navbar">
+         <ul class="navbar-nav">
+            <a href="#" class=" btn_1"><i class="fas fa-heart text-danger fa-lg"> <input type="reset" value="0" class="btn btn-primary" max="1" min="0" ></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#" class=" btn_1"><i class="fas fa-shopping-basket text-primary fa-lg"> <input type="reset" value="0" class="btn btn-primary" max="1" min="0" ></i></a>
+         </ul>
+      </nav>
+   </div>
+   </nav>
+      <!-- page-header -->
+      <div class="container" style="margin-top: 100px;">
+         <h1 class="latest_toys text-white " style="font-family: 'Lobster', cursive;"><i class="fas fa-info-circle"></i> About us</h1>
+      </div>
+      <!-- page-header-end -->
+
+<div class="jumbotron bg-white">
+   <div class="row">
+      <div class="col-sm-8  p-0 border shadow">
+         <img src="../Images/aboutcover.jpg" class="border" alt="imgcover" width="100%" height="500px">
+         <p class=" mt-3 p-3">
+           Toyotoys.pk sells award-winning Toyotoys and learning material for children that help them to learn and grow well. Operated by a team of educationists trained at the top universities of 
+            Pakistan, all the toys and other learning material listed on the website have been researched and hand-selected for their demonstration in support of healthy child development.
+         </p>
+         <p class="p-3">
+            We stock a wide variety of Toyotoys including toys that develop motor skills, improve language and mathematical skills, wooden toys, flashcards, pretend-play
+             toys, and early learning resources. These child developmental toys are all designed to stimulate activity and creativity among infants, toddlers, and younger children. We also have a fantastic choice of STEM kits, puzzles, and board games to challenge older children including teenagers.        
+             </p>
+             <h2 class="p-2">Who are we?</h2>
+             <p class="p-3">
+                Toyotoys  Pakistan was founded in 2020 by Atiqa Aly. She has completed her MPhil in Education from Aga Khan University – Institute of Educational Development. She also has a diploma in Early Childhood Education with several years of teaching and professional development experience. She is assisted by an
+                 excellent team helping her manage this business.
+             </p>         
+      </div>
+      <div class="col-sm-3  ml-lg-5 ml-none border shadow"  >
+   <div class="input-group mt-3">
+   <input class="form-control" type="text" name="" placeholder="Search here..." aria-label="Recipient's " autofocus aria-describedby="my-addon">
+   <div class="input-group-append">
+      <i class="fas fa-search btn btn-primary" aria-hidden="true"></i>
+   </div>
+   </div>
+   <br>
+   <br> 
+   <h4 >Products Categories</h4>
+   <nav class="nav flex-column">
+      <li class="nav-item">
+         <a class="nav-link active border-bottom" target="_blank" href="../htmlpages/Mattel.html">Mattel</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/Nerf.html">Nerf</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/Hotwheels.html">Hotwheel</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/Playsckool.html">Playskool</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/educationaltoys.html">Educational Toys</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/bestseller.html">Best Sellers</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/5to6months.html">Age upto 5 to 6 months</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/1to5year.html">Age upto 1 to 5 years</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" target="_blank" href="../htmlpages/6to10year.html">Age upto 6 to 10 year</a>
+      </li>
+   </nav>
+   <br>
+   <br> 
+   <h4 >Related Pages</h4>
+   <nav class="nav flex-column">
+      <li class="nav-item">
+         <a class="nav-link active  border-bottom" href="./aboutus.html">About us</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" href="./contactus.html">Contact us</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" href="#">Information</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link  border-bottom" href="#">Shipping policy</a>
+      </li>
+   </nav>
+</div>
+</div>
+</div>
+
+ <!-- footer-start -->
+ <div class="container-fluid p-5 bg-light">
+ <footer class="p-2">
+ <div class="row">
+    <div class="col-sm-3" style="margin-top: -20px;">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-item mb-3"><img src="../Images/mainlogo.png" height="80px" width="200px" ></li>
+          <li class="list-item">A108 Adam Street New York, NY 535022 United States
+          </li>
+          <li class="list-item mt-3"><strong>Phone: </strong>+1 5589 55488 55</li>
+          <li class="list-item mt-3"><strong>Email: </strong>info@Example.com</li>
+       </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul class="list-group" style="list-style-type: none;">
+         <li class="list-link">
+            <h4>Usefull links</h4>
+         </li>
+         <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="../index.html" target="_self" class="" style="text-decoration: none; font-size: larger;">Home</a></li>
+         <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">About</a></li>
+         <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="./contactus.html" target="_blank" class="" style="text-decoration: none; font-size: larger;">Contact</a></li>
+         <li class="list-link mb-2"><i class="fas fa-angle-right"></i> <a href="#shop_modal" data-toggle="modal" class="" style="text-decoration: none; font-size: larger;">Shop</a></li>
+
+      </ul>
+   </div>
+    <div class="col-sm-3">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-group-link">
+             <h4>Our Services</h4>
+          </li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Free shipping</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Exchange facility</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">On time delivery</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Verified sellers</a></li>
+          <li class="list-group-link mb-2"><i class="fas fa-angle-right"></i> <a href="#" class="" style="text-decoration: none; font-size: larger;">Garrented product</a></li>
+       </ul>
+    </div>
+    <div class="col-sm-3">
+       <ul class="list-group" style="list-style-type: none;">
+          <li class="list-link">
+             <h4>Our Social Networks</h4>
+          </li>
+          <li class="list-link mb-2">Join us on Facebook,Instagram, Whatsapp</li>
+       </ul> <br>
+       <a href="#" class=" ml-2"><i class="fab fa-instagram fa-3x"></i></a> 
+       <a href="#" class=" ml-2"><i class="fab fa-facebook-square fa-3x" ></i></a>
+       <a href="#" class=" ml-2"><i class='fab fa-whatsapp fa-3x'></i></a>
+    </div>
+ </div>
+
+ </footer>
+ </div>
+
+ <div class="jumbotron-fluid p-1 bg-primary text-center font-weight-bold">
+    <p class="mt-3 text-white">Copyright &copy; 2021 Website | All Rights Reserved.</p>
+ </div>
+ <!-- footer -->
+  
+      <!-- down-to-top-button -->
+      <button class="btn btn-primary" id="mybtn" onclick="functiontop()" ><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+      <!-- down-to-top-button -->
+      <script>
+         var mybutton = document.getElementById("mybtn");
+         // when will be button show and hidden.
+         window.onscroll = function(){btndisplay()};
+         
+         function btndisplay() {
+             if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+             {
+                 mybutton.style.display = "block";
+             }
+             else
+             {
+                 mybutton.style.display = "none";
+             }
+         }
+         function functiontop() {
+             document.body.scrollTop = 0;    
+             document.documentElement.scrollTop = 0;    
+         }
+               </script>
+
+               
+    </body>
+</html>
